@@ -1,0 +1,116 @@
+body {
+    font-size: .875rem;
+  }
+  
+  
+  
+  
+  .sidebar .nav-link {
+    font-weight: 500;
+    color: rgb(255, 250, 250);
+    
+  }
+  
+  
+  
+  .collapse{
+    background-color: rgb(14, 11, 48);
+    color: #f5fafa;
+    height: 100%;
+  }
+  
+  .korobka{
+    height: 30px;
+    background-color:#f3f7f7;
+    border: none;
+  }
+  
+  .galochka{
+    background-color: rgb(18, 228, 210);
+    border:none;
+    border-radius: 50%;
+  }
+  .ctroka{
+  position: absolute;
+  right: 0px;
+  height: 35px;
+  border: #333;
+  }
+  ul.top-menu >li{
+    display: inline-block;
+    padding: 5px;
+    font-size: small; 
+    margin: 1px;
+    height: 30px;
+    
+  }
+  
+  .pop{
+    color: #070607;
+  }
+  .main{
+    z-index: 0;
+    background-color: rgb(213, 227, 236);
+    height: 100%;
+    width: 100%;
+    
+  }
+  .gran{
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    width: 92%;
+    padding-top: 30px;
+    margin-right: 30px;
+    margin-left: 34px;
+    margin-top: 30px;
+    margin-bottom: 170px;
+    background-color: rgb(255, 255, 255);
+    
+  }
+  .h6{
+    text-align: center;
+  }
+  
+  .form-select{
+    height: 45px;
+  }
+  
+  
+  .text-grey-300{
+    color: rgb(155, 167, 167);
+  }
+  
+  
+  .footer{
+    padding-top: 40px;
+    color: #070607;
+    position: sticky; 
+    bottom: 0;
+    
+  }
+  .podval{
+    list-style-type: none;
+    color: #070607;
+    font-size: small;
+    padding-left: 0px;
+    column-count: 2;
+    width: 500px;
+    
+  }
+  ul.podval >li{
+  margin: 15px;
+  }
+  ul.podval2 >li{
+    margin: 15px;
+    }
+  
+  .podval2{
+    list-style-type: none;
+    color: #070607;
+    font-size: small;
+    padding-left: 0px;
+    width: 250px;
+    
+  }
+  
