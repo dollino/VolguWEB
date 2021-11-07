@@ -15,7 +15,7 @@
   <link href="1laba.css" rel="stylesheet">
 </head>
 
-<body>
+<body> 
 
   <header class="navbar  sticky-top bg-light flex-md-nowrap p-0 ">
 
@@ -292,7 +292,8 @@
             </thead>
             <tbody>
             <?php
-                    require "config.php";
+                    require_once("connection.php");
+                    require_once("config.php");
                 ?>
             </tbody>
         </table>

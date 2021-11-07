@@ -1,19 +1,11 @@
 <?php
-define("DB_HOST", "localhost");//хост 
-define("DB_USER", "root");//имя пользователя
-define("DB_PASSWORD", "");//паролья
-define("DB_NAME", "Transformators");//база данных название
-
-
-$mysql = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);//подключение к бд
-if ($mysql->connect_errno) exit("Не удалось подключиться к БД");
-$mysql->set_charset('utf8');
-
+require_once("connection.php");
+require_once("result.php");
 $query = "SELECT Products.name, Products.id_provider, Products.description, Products.cost, Providers.Provider, Products.img FROM Products INNER JOIN Providers ON Providers.id = Products.id_provider";
 //возвращает результат выборки
 
 
-$providersArray = array("CHINT", "IEK", "MBS", "Diel SRL", "СВЭЛ");//создание массива
+$providersArray = "SELECT Providers.Provider FROM PROVIDERS ";
 
 if ((isset($_GET["name"])) || (isset($_GET["provider"])) || (isset($_GET["ot"])) || (isset($_GET["do"]))) { // проверка на получение значения
   
@@ -60,17 +52,4 @@ if ((isset($_GET["name"])) || (isset($_GET["provider"])) || (isset($_GET["ot"]))
   }
 }
 
-$result = $mysql->query($query);
-$i = 0;
-while ($row = $result->fetch_assoc()) {
-    $i++;
-    echo "<tr><th scope='row'><img src='" . $row["img"] . "' style='width: 80px'></th>
-    <td>" . $row['name'] . "</td>
-    <td>" . $row["Provider"] . "</td>
-    <td>" . $row['description'] . "</td>
-    <td>" . $row['cost'] . " руб.</td>
-    </tr>";                     
-}
-if ($i == 0) {
-    echo "Ничего не найденно(((";
-}?>
+?>
