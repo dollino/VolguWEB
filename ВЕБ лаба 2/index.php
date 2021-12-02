@@ -1,12 +1,20 @@
+<?php
+require_once 'connection.php';
 
+
+$options = $mysql->query("SELECT * FROM Providers");
+
+$options = $options->fetch_all(); // получаем в массив
+// print_r($options);
+
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8"> 
  
 
-  
   <title>Трансформатор напряжения Phaseo Optimum ABL6 230-400 В 1x230 В 630 ВA - Schneider Electric - Phaseo -
     Трансформаторы напряжения - Трансформаторы - ОНЛАЙНСКЛАД | Промышленный маркетплейс</title>
 
@@ -259,19 +267,29 @@
         <div class="price align-items-center justify-content-center">
           <h6>По цене: </h6>
            <br><span style="padding-right: 8px ;   ">Цена от: </span>
-           <input style='width: 700px align-center' class="form-control" type="number" name="ot">
-           <span style="padding: 0 8px"> До </span>
-           <input style='width: 700px align-center ' class="form-control " type="number" name="do">
+           <input style='width: 700px align-center' class="form-control" type="number" name="ot" value="<?= htmlspecialchars(
+               $_GET['ot']
+           ) ?>">
+           <br><span style="padding-right: 8px ;   ">Цена : </span>
+           <input style='width: 700px align-center ' class="form-control " type="number" name="do" value="<?= htmlspecialchars(
+               $_GET['do']
+           ) ?>">
            <br><h6 >По названию: </h6>
            <br><input style='width: 700px align-center ' class="form-control" name="name" type="text" placeholder="Название товара">
            <br><h6 >По поставщику: </h6>
            <div><br><select style='width: 1070px; height : 45px; margin-top : 15px' class="form-select" name="provider" aria-label="Default select example">
-                <option selected value="0">Поставщики</option>
+           <?php
+                foreach($options as $value)
+                {
+                  echo '<option value="' .  $value[0] . '">' . $value[1] . '</option>' ; 
+                }     
+           ?>
+           <!-- <option selected value="0">Поставщики</option>
                 <option value="1">СHINT</option>
                 <option value="2">IEK</option>
                 <option value="3">MBS</option>
                 <option value="4">Diel SRL</option>
-                <option value="5">СВЭЛ</option>
+                <option value="5">СВЭЛ</option> -->
             </select></div>
             
 
@@ -291,10 +309,9 @@
                 </tr>
             </thead>
             <tbody>
-            <?php
-                    require_once("connection.php");
-                    require_once("config.php");
-                ?>
+              <?php
+            require_once 'config.php';
+            ?>
             </tbody>
         </table>
     </div>
