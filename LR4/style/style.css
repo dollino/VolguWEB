@@ -1,0 +1,104 @@
+.nav-link{
+    font-weight: 700;
+    font-size: 16px;
+    color: black !important;
+}
+.nav-link:hover{
+    color: blue !important;
+}
+.nav-bottom{
+    padding: 20px 0;
+    line-height: 44px;
+}
+.nav-bottom .btn-primary{
+    line-height: 40px;
+    background-color: #fff;
+    color: blue;
+    border-radius: 5px;
+}
+.nav-bottom .btn-primary:hover{
+    color: white;
+    background-color: blue;
+}
+.logo img{
+    height: 60px;
+}
+.phone a{
+    color: black;
+    font-size: 30px;
+}
+.top-text ul{
+    list-style: none;
+    font-size: 12px;
+}
+.block-btn .btn{
+    padding: 15px;
+}
+.main .bg-light{
+    margin-bottom: 50px;
+    padding: 40px 0;
+}
+.top-text li a{
+    color: gray;
+    text-decoration: none;
+}
+.top-text .dropdown{
+    text-decoration: underline;
+}
+.info-top .btn{
+    padding: 5px;
+}
+.info-main{
+    padding: 60px 40px 40px 20px;
+}
+.info-main .sale{
+    color: white;
+    background-color: green;
+}
+.code{
+    color: gray;
+}
+.price{
+    font-size: 26px;
+    font-weight: 700;
+}
+.green{
+    color: green;
+}
+.btn-info{
+    color: blue;
+}
+.info-main .col-5 .btn-info{
+    padding: 0 5px;
+    margin-bottom: -5px;
+}
+.info-bottom .btn{
+    padding: 25px 15px;
+}
+.info-bottom .btn-active{
+    background-color: white;
+    border-top: blue 2px solid;
+}
+.info-bottom .w-100{
+    padding: 5px 0;
+    margin-bottom: 0;
+}
+.btn-group{
+    padding: 0 !important;
+}
+.info-bottom li{
+    color: rgb(10, 177, 85);
+    margin: 5px 0;
+}
+.info-bottom li span{
+    color: rgb(0, 0, 0);
+    
+}
+.footer-top{
+    font-weight: 700;
+    font-size: 22px;
+}
+.footer-text{
+    font-size: 20px;
+    margin-top: 5px;
+}
